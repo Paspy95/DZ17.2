@@ -10,11 +10,11 @@ public class PostmanEchoTest {
         var data = "2024";
         given()
                 .baseUri("https://postman-echo.com")
-                .body(data)
+                .body(2023)
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo(data));
+                .body("data", equalTo(2023));
     }
 }
